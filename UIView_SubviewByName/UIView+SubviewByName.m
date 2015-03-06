@@ -39,7 +39,7 @@ static const void *groupViewMapPropertyKey = &groupViewMapPropertyKey;
 
 }
 
-- (UIView *)subviewByName:(NSString *)name {
+- (UIView *)subviewWithName:(NSString *)name {
     int tag = [[self.nameViewMap objectForKey:name] intValue];
     for(UIView *view in self.subviews) {
         if(view.tag == tag)
@@ -48,7 +48,7 @@ static const void *groupViewMapPropertyKey = &groupViewMapPropertyKey;
     return nil;
 }
 
-- (NSArray *)subviewsByGroupName:(NSString *)groupName {
+- (NSArray *)subviewsWithGroupName:(NSString *)groupName {
     NSMutableArray *result = [NSMutableArray new];
     NSArray *tags = [self.groupNameViewMap objectForKey:groupName];
     for(UIView *view in self.subviews) {
@@ -60,13 +60,13 @@ static const void *groupViewMapPropertyKey = &groupViewMapPropertyKey;
 }
 
 - (void)removeSubviewWithName:(NSString *)name {
-    UIView *view = [self subviewByName:name];
+    UIView *view = [self subviewWithName:name];
     if(view != nil)
         [view removeFromSuperview];
 }
 
 - (void)removeSubviewsWithGroupName:(NSString *)groupName {
-    for(UIView *view in [self subviewsByGroupName:groupName]) {
+    for(UIView *view in [self subviewsWithGroupName:groupName]) {
         [view removeFromSuperview];
     }
 }

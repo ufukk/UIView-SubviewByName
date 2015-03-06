@@ -17,9 +17,9 @@ static const int TAG_INDEX_OFFSET = 10000;
 
 @property (nonatomic) NSMutableDictionary *groupNameViewMap;
 
-- (UIView *)subviewByName:(NSString *)name;
+- (UIView *)subviewWithName:(NSString *)name;
 
-- (NSArray *)subviewsByGroupName:(NSString *)groupName;
+- (NSArray *)subviewsWithGroupName:(NSString *)groupName;
 
 - (void)addSubview:(UIView *)view withName:(NSString *)name;
 
