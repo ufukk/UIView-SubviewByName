@@ -16,7 +16,7 @@ Accessing named subviews:
 
 Accessing multiple subviews with a name:
 
-    [parentView subviewsWthGroupName:@"group_Name"];
+    [parentView subviewsWithGroupName:@"group_Name"];
 
 Removing a named subview:
 
