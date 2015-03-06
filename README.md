@@ -3,6 +3,7 @@
 Simple UIView extension that provides naming and grouping options for subviews.
 
 Linking a subview with a name:
+
 [parentView addSubview:subview withName:@"sub_view"]
 
 Or
